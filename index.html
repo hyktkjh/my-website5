@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="日本大学理工学部応用情報工学科に所属する、みくの自己紹介ページです。">
+  <title>MIKU | PROFILE</title>
+  <style>
+    :root {
+      --bg: #101014;
+      --panel: #1b1a20;
+      --text: #f7f2f5;
+      --muted: #b8adb6;
+      --pink: #ff4f98;
+      --pink-soft: #ffacd0;
+      --line: #39313b;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at 88% 0%, rgba(255,79,152,.13), transparent 32%),
+        var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
+                   "Yu Gothic", Meiryo, sans-serif;
+      line-height: 1.85;
+    }
+    a { color: inherit; }
+    .wrap { width: min(940px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 20px; padding: 25px 0;
+    }
+    .logo { color: var(--pink-soft); font-size: .82rem; font-weight: 800; letter-spacing: .22em; }
+    nav { display: flex; flex-wrap: wrap; gap: 16px; }
+    nav a { color: var(--muted); text-decoration: none; font-size: .8rem; }
+    nav a:hover { color: var(--pink); }
+    .hero {
+      position: relative; overflow: hidden; margin: 24px 0;
+      padding: clamp(48px, 9vw, 88px) 8%;
+      border: 1px solid #553247; border-radius: 22px;
+      background:
+        radial-gradient(circle at 85% 22%, rgba(255,79,152,.28), transparent 26%),
+        linear-gradient(125deg, #261923, #17151b 68%);
+    }
+    .hero::after {
+      content: "M"; position: absolute; right: 5%; bottom: -42%;
+      font-size: clamp(190px, 35vw, 360px); line-height: 1;
+      font-weight: 900; color: rgba(255,255,255,.035); pointer-events: none;
+    }
+    .eyebrow { margin: 0 0 12px; color: var(--pink); font-size: .76rem; font-weight: 800; letter-spacing: .3em; }
+    h1 {
+      position: relative; z-index: 1; margin: 0; font-size: clamp(3.3rem, 11vw, 6.3rem);
+      line-height: 1.05; letter-spacing: .13em; text-shadow: 0 0 30px rgba(255,79,152,.2);
+    }
+    .hero-sub { position: relative; z-index: 1; margin: 18px 0 0; color: #d4c6cf; letter-spacing: .08em; }
+    .hero-line { width: 58px; height: 3px; margin-top: 27px; background: var(--pink); }
+    main { padding-bottom: 48px; }
+    section {
+      margin-top: 20px; padding: 30px clamp(20px, 5vw, 38px);
+      background: rgba(27,26,32,.96); border: 1px solid var(--line);
+      border-radius: 18px; box-shadow: 0 14px 34px rgba(0,0,0,.16);
+    }
+    .kicker { margin: 0 0 4px; color: var(--pink); font-size: .7rem; font-weight: 800; letter-spacing: .22em; }
+    h2 { margin: 0 0 18px; font-size: 1.38rem; letter-spacing: .06em; }
+    h3 { margin: 25px 0 12px; font-size: 1rem; }
+    .profile { display: grid; grid-template-columns: 130px 1fr; margin: 0; }
+    .profile dt, .profile dd { margin: 0; padding: 11px 0; border-bottom: 1px solid var(--line); }
+    .profile dt { color: var(--muted); font-size: .9rem; }
+    .profile dd { font-weight: 600; }
+    .intro { margin: 0; color: #e6dfe4; }
+    .tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .tag {
+      display: inline-block; padding: 7px 14px; border-radius: 999px;
+      color: var(--pink-soft); background: #30202b;
+      border: 1px solid #694056; font-size: .9rem;
+    }
+    .links { display: grid; gap: 11px; }
+    .links a {
+      display: block; padding: 14px 16px; border: 1px solid var(--line);
+      border-radius: 12px; text-decoration: none; background: #19181d;
+      overflow-wrap: anywhere; transition: border-color .2s, transform .2s;
+    }
+    .links a:hover { border-color: var(--pink); transform: translateY(-2px); }
+    .links small { display: block; color: var(--muted); margin-top: 3px; }
+    footer { padding: 8px 0 32px; color: var(--muted); text-align: center; font-size: .78rem; }
+    @media (max-width: 620px) {
+      .wrap { width: calc(100% - 28px); }
+      header { align-items: flex-start; flex-direction: column; gap: 12px; }
+      nav { gap: 11px 14px; }
+      .hero { margin-top: 14px; border-radius: 17px; }
+      section { padding: 25px 20px; border-radius: 15px; }
+      .profile { grid-template-columns: 1fr; }
+      .profile dt { padding: 9px 0 0; border: 0; }
+      .profile dd { padding: 1px 0 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">MIKU / PROFILE</div>
+      <nav aria-label="ページ内メニュー">
+        <a href="#about">PROFILE</a>
+        <a href="#story">ABOUT</a>
+        <a href="#study">STUDY</a>
+        <a href="#favorite">FAVORITES</a>
+        <a href="#future">FUTURE</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <p class="eyebrow">HELLO, NICE TO MEET YOU</p>
+      <h1>MIKU<span style="color:var(--pink)">.</span></h1>
+      <p class="hero-sub">日本大学 理工学部 応用情報工学科</p>
+      <div class="hero-line"></div>
+    </div>
+
+    <main>
+      <section id="about">
+        <p class="kicker">01 / PROFILE</p>
+        <h2>プロフィール</h2>
+        <dl class="profile">
+          <dt>名前</dt><dd>みく</dd>
+          <dt>大学</dt><dd>日本大学</dd>
+          <dt>学部</dt><dd>理工学部</dd>
+          <dt>学科</dt><dd>応用情報工学科</dd>
+        </dl>
+      </section>
+
+      <section id="story">
+        <p class="kicker">02 / ABOUT ME</p>
+        <h2>自己紹介</h2>
+        <p class="intro">
+          私はK-POPや韓国の文化に興味があり、韓国語の勉強をしています。
+          韓国語を実際の会話でも使ってみたいと思い、韓国人の友人と話すときには、
+          韓国語と日本語の両方を使ってコミュニケーションを楽しんでいます。
+          まだ自分の伝えたいことをうまく表現できないこともありますが、
+          実際に会話する経験を通して、少しずつ韓国語に親しんでいます。
+        </p>
+      </section>
+
+      <section id="study">
+        <p class="kicker">03 / STUDY</p>
+        <h2>今、学んでいること</h2>
+        <div class="tags">
+          <span class="tag">プログラミング</span>
+          <span class="tag">C言語</span>
+          <span class="tag">情報工学の基礎</span>
+          <span class="tag">論理回路</span>
+          <span class="tag">数値表現</span>
+        </div>
+      </section>
+
+      <section id="favorite">
+        <p class="kicker">04 / FAVORITES</p>
+        <h2>趣味・好きなこと</h2>
+        <div class="tags">
+          <span class="tag">K-POP</span><span class="tag">音楽</span><span class="tag">ダンス</span>
+        </div>
+        <h3>好きなこと</h3>
+        <div class="tags">
+          <span class="tag">韓国語</span><span class="tag">旅行</span><span class="tag">美容</span>
+        </div>
+        <h3>好きなアーティスト</h3>
+        <div class="tags">
+          <span class="tag">AND2BLE</span><span class="tag">IVE</span><span class="tag">Hearts2Hearts</span>
+        </div>
+      </section>
+
+      <section id="future">
+        <p class="kicker">05 / FUTURE</p>
+        <h2>これからやってみたいこと</h2>
+        <div class="tags">
+          <span class="tag">Webサイト制作</span>
+          <span class="tag">プログラミングをもっと学ぶ</span>
+          <span class="tag">韓国語の勉強</span>
+          <span class="tag">いろいろな場所へ旅行</span>
+        </div>
+      </section>
+
+      <section id="links">
+        <p class="kicker">06 / LINKS</p>
+        <h2>関連リンク</h2>
+        <div class="links">
+          <a href="https://www.nihon-u.ac.jp/academics/undergraduate/f_science_and_technology/"
+             target="_blank" rel="noopener noreferrer">
+            日本大学 理工学部
+            <small>公式サイトを見る ↗</small>
+          </a>
+          <a href="https://www.ce.cst.nihon-u.ac.jp/"
+             target="_blank" rel="noopener noreferrer">
+            日本大学 理工学部 応用情報工学科
+            <small>学科公式サイトを見る ↗</small>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer>MIKU / SELF INTRODUCTION</footer>
+  </div>
+</body>
+</html>
